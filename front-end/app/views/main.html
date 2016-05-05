@@ -1,0 +1,74 @@
+<!--<ul class="flex-container">-->
+    <!--<li class="flex-item">1</li>-->
+    <!--<li class="flex-item">2</li>-->
+    <!--<li class="flex-item">3</li>-->
+    <!--<li class="flex-item">4</li>-->
+<!--</ul>-->
+
+<!--<md-container> <md-button>boutton1</md-button> </md-container>-->
+
+<md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
+    <div flex="33" layout="column">
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Card with image</span>
+                    <span class="md-subhead">Large</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-lg card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button>Action 1</md-button>
+                <md-button>Action 2</md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+    <div flex="33" layout="column">
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Card with image</span>
+                    <span class="md-subhead">Small</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-sm card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button>Action 1</md-button>
+                <md-button>Action 2</md-button>
+            </md-card-actions>
+        </md-card>
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Card with image</span>
+                    <span class="md-subhead">Medium</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-md card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button>Action 1</md-button>
+                <md-button>Action 2</md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+    <div flex="33" layout="column">
+        <md-card>
+            <md-card-title class="twitter">
+                <md-card-title-text>
+                    <span><img class="logo-img-sm" src="images/twitter-circle-white.png" alt="Twitter"></span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content layout="row" layout-align="space-between">
+                <div class="md-media-xl card-media scrollable" ng-controller="TwitterFeedCtrl">
+                    <twitterfeedwindow> </twitterfeedwindow>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+</md-content>

@@ -42,8 +42,24 @@ body {
   height: auto;
 }
 
+.logo-img-sm {
+  max-width:35px;
+  max-height:35px;
+  width: auto;
+  height: auto;
+  margin-top:-5px;
+}
+
 .col-centered {
   margin: 0 auto;
+}
+
+.scrollable {
+  overflow-y:auto
+}
+
+.twitter {
+  background-color: #55acee;
 }
 
 /* Custom page footer */
@@ -69,14 +85,6 @@ body {
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
