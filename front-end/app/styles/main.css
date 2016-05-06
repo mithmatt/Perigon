@@ -34,6 +34,14 @@ body {
   background-color: #01786e;
 }
 
+.top-padding-news {
+  padding-top: 20px;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
 .screen-height-lg {
   height: 58vh;
 }
@@ -44,6 +52,14 @@ body {
 
 .top-padding {
   padding-top: 15px;
+}
+
+.bolder-font {
+  font-weight: bolder !important;
+}
+
+.card-font {
+  color: white;
 }
 
 .logo-img {
@@ -60,6 +76,10 @@ body {
   width: auto;
   height: auto;
   margin-top:-5px;
+}
+
+.after-span::after {
+    content: "sdfkhsakjfjksadhl"
 }
 
 .col-centered {

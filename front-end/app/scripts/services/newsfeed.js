@@ -2,25 +2,25 @@
 
 /**
  * @ngdoc service
- * @name frontEndApp.twitterfeed
+ * @name frontEndApp.newsfeedwindow
  * @description
- * # twitterfeed
- * Factory in the frontEndApp.
+ * # newsfeedwindow
+ * Service in the frontEndApp.
  */
 angular.module('frontEndApp')
-  .factory('TwitterFeed', function ($http) {
+  .service('NewsFeed', function ($http) {
     var object = {
-      tweets: []
+      news: []
     };
 
     var SERVER = 'http://192.168.102.23:8080';
 
-    object.getTweets = function() {
+    object.getNews = function() {
       return $http({
         method: 'GET',
-        url: SERVER + '/tweets'
+        url: SERVER + '/news'
       }).success(function(data){
-        object.tweets = data.tweets;
+        object.news = data.news;
       });
     };
 

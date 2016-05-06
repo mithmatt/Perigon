@@ -12,17 +12,25 @@
         <md-card>
             <md-card-title class="news card-title" ng-click="toggle('news')">
                 <md-card-title-text>
-                    <span><img class="logo-img-sm" src="images/newspaper.png" alt="News"></span>
-                    <!--<div><md-button class="md-fab md-mini">Subscribe</md-button></div>-->
+                    <table>
+                        <tr>
+                            <td>
+                                <span><img class="logo-img-sm" src="images/newspaper.png" alt="News"></span>
+                            </td>
+                            <td>
+                                <h4 class="bolder-font card-font">NEWS</h4>
+                            </td>
+                        </tr>
+                    </table>
                 </md-card-title-text>
             </md-card-title>
             <div ng-hide="showNews">
             <md-card-content class="top-padding" >
-                <div class="scrollable screen-height-lg" ng-controller="TwitterFeedCtrl">
-                    <twitterfeedwindow> </twitterfeedwindow>
+                <div class="scrollable screen-height-lg" ng-controller="NewsfeedCtrl">
+                    <newsfeedwindow> </newsfeedwindow>
                 </div>
             </md-card-content>
-            <md-button class="md-raised md-primary col-sm-3">Subscribe</md-button>
+            <md-button class="md-raised col-sm-4" ng-click="clickSubscribe('news')" ng-class="subscribe.news.clazz">{{ subscribe.news.value ? "Subscribe": "Unsubscribe" }}</md-button>
             </div>
         </md-card>
     </div>
@@ -30,7 +38,16 @@
         <md-card>
             <md-card-title class="facebook card-title" ng-click="toggle('facebook')">
                 <md-card-title-text>
-                    <span><img class="logo-img-sm" src="images/facebook.png" alt="Events"></span>
+                    <table>
+                        <tr>
+                            <td>
+                                <span><img class="logo-img-sm" src="images/facebook.png" alt="Events"></span>
+                            </td>
+                            <td>
+                                <h4 class="bolder-font card-font">EVENTS</h4>
+                            </td>
+                        </tr>
+                    </table>
                 </md-card-title-text>
             </md-card-title>
             <div ng-hide="showFacebook">
@@ -39,13 +56,22 @@
                     <twitterfeedwindow> </twitterfeedwindow>
                 </div>
             </md-card-content>
-            <md-button class="md-raised md-primary col-sm-3">Subscribe</md-button>
+                <md-button class="md-raised col-sm-4" ng-click="clickSubscribe('facebook')" ng-class="subscribe.facebook.clazz">{{ subscribe.facebook.value ? "Subscribe": "Unsubscribe" }}</md-button>
             </div>
         </md-card>
         <md-card>
             <md-card-title class="glassdoor card-title" ng-click="toggle('glassdoor')">
                 <md-card-title-text>
-                    <span><img class="logo-img-sm" src="images/glassdoor.png" alt="Glassdoor"></span>
+                    <table>
+                        <tr>
+                            <td>
+                                <span><img class="logo-img-sm" src="images/glassdoor.png" alt="Glassdoor"></span>
+                            </td>
+                            <td>
+                                <h4 class="bolder-font card-font">COMPANY REVIEWS</h4>
+                            </td>
+                        </tr>
+                    </table>
                 </md-card-title-text>
             </md-card-title>
             <div ng-hide="showGlassdoor">
@@ -54,7 +80,7 @@
                     <twitterfeedwindow> </twitterfeedwindow>
                 </div>
             </md-card-content>
-            <md-button class="md-raised md-primary col-sm-3">Subscribe</md-button>
+                <md-button class="md-raised col-sm-4" ng-click="clickSubscribe('glassdoor')" ng-class="subscribe.glassdoor.clazz">{{ subscribe.glassdoor.value ? "Subscribe": "Unsubscribe" }}</md-button>
             </div>
         </md-card>
     </div>
@@ -62,7 +88,16 @@
         <md-card>
             <md-card-title class="twitter card-title" ng-click="toggle('twitter')">
                 <md-card-title-text>
-                    <span><img class="logo-img-sm" src="images/twitter-circle-white.png" alt="Twitter"></span>
+                    <table>
+                        <tr>
+                            <td>
+                                <span><img class="logo-img-sm" src="images/twitter-circle-white.png" alt="Twitter"></span>
+                            </td>
+                            <td>
+                                <h4 class="bolder-font card-font">&nbsp;&nbsp;TWITTER FEED</h4>
+                            </td>
+                        </tr>
+                    </table>
                 </md-card-title-text>
             </md-card-title>
             <div ng-hide="showTwitter">
@@ -71,10 +106,8 @@
                     <twitterfeedwindow> </twitterfeedwindow>
                 </div>
             </md-card-content>
-            <md-button class="md-raised md-primary col-sm-3">Subscribe</md-button>
+                <md-button class="md-raised col-sm-4" ng-click="clickSubscribe('twitter')" ng-class="subscribe.twitter.clazz">{{ subscribe.twitter.value ? "Subscribe": "Unsubscribe" }}</md-button>
             </div>
         </md-card>
     </div>
 </md-content>
-
-<!-- <md-button class="md-fab md-mini"></md-button>-->

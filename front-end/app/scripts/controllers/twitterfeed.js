@@ -8,9 +8,18 @@
  * Controller of the frontEndApp
  */
 angular.module('frontEndApp')
-  .controller('TwitterFeedCtrl', ['$scope', 'TwitterFeed', function ($scope, TwitterFeed) {
+  .controller('TwitterFeedCtrl', ['$scope', '$timeout', 'TwitterFeed', function ($scope, $timeout, TwitterFeed) {
 
-    // var x = TwitterFeed.getTweets();
+    $scope.tweets = [];
+    var x = TwitterFeed.getTweets();
+
+    var poll = function() {
+      $timeout(function() {
+        $scope.value++;
+        poll();
+      }, 1000);
+    };
+    poll();
 
     var imagePath = 'images/pivotal_logo.png';
     $scope.messages = [{
