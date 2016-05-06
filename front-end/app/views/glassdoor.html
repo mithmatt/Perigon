@@ -1,0 +1,14 @@
+<md-content>
+    <md-list>
+        <md-list-item class="md-3-line" ng-repeat="item in reviews">
+            <div class="md-list-item-text">
+                <div>
+                    <h3 class="bolder-font" style="color: green !important;">{{item.pros | limitTo:45}}...</h3>
+                    <h4 class="bolder-font" style="color: red !important;">{{item.cons  | limitTo:45}}...</h4>
+                    <h4 class="bolder-font" style="color: blue !important;">{{item.advice | limitTo:45}}...</h4>
+                </div>
+            </div>
+            <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+    </md-list>
+</md-content>

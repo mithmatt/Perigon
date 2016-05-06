@@ -11,17 +11,23 @@ angular.module('frontEndApp')
   .controller('TwitterFeedCtrl', ['$scope', '$timeout', 'TwitterFeed', function ($scope, $timeout, TwitterFeed) {
 
     $scope.tweets = [];
-    var x = TwitterFeed.getTweets();
 
-    var poll = function() {
-      $timeout(function() {
-        $scope.value++;
-        poll();
-      }, 1000);
-    };
-    poll();
+    TwitterFeed.getTweets().success(function(data){
+      $scope.tweets = data.data;
+    });
 
-    var imagePath = 'images/pivotal_logo.png';
+    //var poll = function() {
+    //  $timeout(function() {
+    //    TwitterFeed.getTweets().success(function(data){
+    //      $scope.tweets = data.data;
+    //    });
+    //    poll();
+    //  }, 5000);
+    //};
+    //
+    //poll();
+
+/*    var imagePath = 'images/pivotal_logo.png';
     $scope.messages = [{
       face : imagePath,
       what: 'Hello?',
@@ -58,5 +64,5 @@ angular.module('frontEndApp')
       who: 'Obama',
       when: '3:08PM',
       notes: " I'll be in your neighborhood doing errands"
-    }];
+    }];*/
   }]);

@@ -12,16 +12,20 @@ angular.module('frontEndApp')
 
     $scope.news = [];
 
-    var poll = function() {
-      $timeout(function() {
-        NewsFeed.getNews().success(function(data){
-          $scope.news = data.news;
-        });
-        poll();
-      }, 5000);
-    };
+    NewsFeed.getNews().success(function(data){
+      $scope.news = data.news;
+    });
 
-    poll();
+    //var poll = function() {
+    //  $timeout(function() {
+    //    NewsFeed.getNews().success(function(data){
+    //      $scope.news = data.news;
+    //    });
+    //    poll();
+    //  }, 5000);
+    //};
+    //
+    //poll();
 
     //$scope.news = [
     //  {

@@ -26,11 +26,33 @@
             </md-card-title>
             <div ng-hide="showNews">
             <md-card-content class="top-padding" >
-                <div class="scrollable screen-height-lg" ng-controller="NewsfeedCtrl">
+                <div class="scrollable screen-height-sm" ng-controller="NewsfeedCtrl">
                     <newsfeedwindow> </newsfeedwindow>
                 </div>
             </md-card-content>
             <md-button class="md-raised col-sm-4" ng-click="clickSubscribe('news')" ng-class="subscribe.news.clazz">{{ subscribe.news.value ? "Subscribe": "Unsubscribe" }}</md-button>
+            </div>
+        </md-card>
+        <md-card>
+            <md-card-title class="finance card-title" ng-click="toggle('finance')">
+                <md-card-title-text>
+                    <table>
+                        <tr>
+                            <td>
+                                <span><img class="logo-img-sm" src="images/yahoo.png" alt="Finance"></span>
+                            </td>
+                            <td>
+                                <h4 class="bolder-font card-font">&nbsp;FINANCE</h4>
+                            </td>
+                        </tr>
+                    </table>
+                </md-card-title-text>
+            </md-card-title>
+            <div ng-hide="showFinance">
+                <md-card-content class="top-padding" >
+                    <img src="http://chart.finance.yahoo.com/z?s=EMC&t=3m&q=l&l=on&z=s&p=m50,m200"/>
+                </md-card-content>
+                <md-button class="md-raised col-sm-4" ng-click="clickSubscribe('finance')" ng-class="subscribe.finance.clazz">{{ subscribe.finance.value ? "Subscribe": "Unsubscribe" }}</md-button>
             </div>
         </md-card>
     </div>
@@ -52,8 +74,8 @@
             </md-card-title>
             <div ng-hide="showFacebook">
             <md-card-content class="top-padding">
-                <div class="scrollable screen-height-sm" ng-controller="TwitterFeedCtrl">
-                    <twitterfeedwindow> </twitterfeedwindow>
+                <div class="scrollable screen-height-sm" ng-controller="EventfeedCtrl">
+                    <eventfeedwindow> </eventfeedwindow>
                 </div>
             </md-card-content>
                 <md-button class="md-raised col-sm-4" ng-click="clickSubscribe('facebook')" ng-class="subscribe.facebook.clazz">{{ subscribe.facebook.value ? "Subscribe": "Unsubscribe" }}</md-button>
@@ -76,8 +98,8 @@
             </md-card-title>
             <div ng-hide="showGlassdoor">
             <md-card-content class="top-padding">
-                <div class="scrollable screen-height-sm" ng-controller="TwitterFeedCtrl">
-                    <twitterfeedwindow> </twitterfeedwindow>
+                <div class="scrollable screen-height-md" ng-controller="GlassdoorCtrl">
+                    <glassdoorwindow> </glassdoorwindow>
                 </div>
             </md-card-content>
                 <md-button class="md-raised col-sm-4" ng-click="clickSubscribe('glassdoor')" ng-class="subscribe.glassdoor.clazz">{{ subscribe.glassdoor.value ? "Subscribe": "Unsubscribe" }}</md-button>

@@ -43,7 +43,11 @@ body {
 }
 
 .screen-height-lg {
-  height: 58vh;
+  height: 75vh;
+}
+
+.screen-height-md {
+  height: 35vh;
 }
 
 .screen-height-sm {
@@ -96,6 +100,10 @@ body {
 
 .news {
   background-color: #d31800;
+}
+
+.finance {
+  background-color: #3e0a44;
 }
 
 .facebook {

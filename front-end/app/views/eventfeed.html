@@ -1,0 +1,14 @@
+<md-content>
+    <md-list>
+        <md-list-item class="md-3-line" ng-repeat="item in events">
+            <div class="md-list-item-text">
+                <div>
+                    <h3 class="bolder-font"><a href="https://www.facebook.com/events/{{item.id}}" target="_blank">{{item.name.length < 30 ? item.name : (item.name | limitTo: 45)}}</a></h3>
+                    <h4>{{item.place ? (item.place.location ? (item.place.location.city ? item.place.location.city : ""): ""): "" }}</h4>
+                    <h4>{{item.start_time}}</h4>
+                </div>
+            </div>
+            <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+    </md-list>
+</md-content>

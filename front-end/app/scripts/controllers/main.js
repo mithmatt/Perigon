@@ -14,6 +14,7 @@ angular.module('frontEndApp')
     $scope.showFacebook = false;
     $scope.showTwitter = false;
     $scope.showGlassdoor = false;
+    $scope.showFinance = false;
 
     $scope.subscribe = {
       news: {
@@ -29,6 +30,10 @@ angular.module('frontEndApp')
         clazz : "md-primary"
       },
       glassdoor: {
+        value: true,
+        clazz : "md-primary"
+      },
+      finance: {
         value: true,
         clazz : "md-primary"
       }
@@ -47,6 +52,9 @@ angular.module('frontEndApp')
           break;
         case 'glassdoor':
           $scope.showGlassdoor = !$scope.showGlassdoor;
+          break;
+        case 'finance':
+          $scope.showFinance = !$scope.showFinance;
           break;
       }
     };
@@ -68,6 +76,10 @@ angular.module('frontEndApp')
         case 'glassdoor':
           $scope.subscribe.glassdoor.value = !$scope.subscribe.glassdoor.value;
           $scope.subscribe.glassdoor.clazz = $scope.subscribe.glassdoor.value ? "md-primary": "md-warn";
+          break;
+        case 'finance':
+          $scope.subscribe.finance.value = !$scope.subscribe.finance.value;
+          $scope.subscribe.finance.clazz = $scope.subscribe.finance.value ? "md-primary": "md-warn";
           break;
       }
     };
