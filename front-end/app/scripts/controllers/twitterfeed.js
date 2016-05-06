@@ -43,5 +43,11 @@ angular.module('frontEndApp')
       who: 'Michelle',
       when: '3:08PM',
       notes: " I'll be in your neighborhood doing errands"
+    }, {
+      face : imagePath,
+      what: 'Oh Yes I do!',
+      who: 'Obama',
+      when: '3:08PM',
+      notes: " I'll be in your neighborhood doing errands"
     }];
   }]);

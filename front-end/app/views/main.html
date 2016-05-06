@@ -10,65 +10,71 @@
 <md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
     <div flex="33" layout="column">
         <md-card>
-            <md-card-title>
+            <md-card-title class="news card-title" ng-click="toggle('news')">
                 <md-card-title-text>
-                    <span class="md-headline">Card with image</span>
-                    <span class="md-subhead">Large</span>
+                    <span><img class="logo-img-sm" src="images/newspaper.png" alt="News"></span>
+                    <!--<div><md-button class="md-fab md-mini">Subscribe</md-button></div>-->
                 </md-card-title-text>
-                <md-card-title-media>
-                    <div class="md-media-lg card-media"></div>
-                </md-card-title-media>
             </md-card-title>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button>Action 1</md-button>
-                <md-button>Action 2</md-button>
-            </md-card-actions>
+            <div ng-hide="showNews">
+            <md-card-content class="top-padding" >
+                <div class="scrollable screen-height-lg" ng-controller="TwitterFeedCtrl">
+                    <twitterfeedwindow> </twitterfeedwindow>
+                </div>
+            </md-card-content>
+            <md-button class="md-raised md-primary col-sm-3">Subscribe</md-button>
+            </div>
         </md-card>
     </div>
     <div flex="33" layout="column">
         <md-card>
-            <md-card-title>
+            <md-card-title class="facebook card-title" ng-click="toggle('facebook')">
                 <md-card-title-text>
-                    <span class="md-headline">Card with image</span>
-                    <span class="md-subhead">Small</span>
+                    <span><img class="logo-img-sm" src="images/facebook.png" alt="Events"></span>
                 </md-card-title-text>
-                <md-card-title-media>
-                    <div class="md-media-sm card-media"></div>
-                </md-card-title-media>
             </md-card-title>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button>Action 1</md-button>
-                <md-button>Action 2</md-button>
-            </md-card-actions>
+            <div ng-hide="showFacebook">
+            <md-card-content class="top-padding">
+                <div class="scrollable screen-height-sm" ng-controller="TwitterFeedCtrl">
+                    <twitterfeedwindow> </twitterfeedwindow>
+                </div>
+            </md-card-content>
+            <md-button class="md-raised md-primary col-sm-3">Subscribe</md-button>
+            </div>
         </md-card>
         <md-card>
-            <md-card-title>
+            <md-card-title class="glassdoor card-title" ng-click="toggle('glassdoor')">
                 <md-card-title-text>
-                    <span class="md-headline">Card with image</span>
-                    <span class="md-subhead">Medium</span>
+                    <span><img class="logo-img-sm" src="images/glassdoor.png" alt="Glassdoor"></span>
                 </md-card-title-text>
-                <md-card-title-media>
-                    <div class="md-media-md card-media"></div>
-                </md-card-title-media>
             </md-card-title>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button>Action 1</md-button>
-                <md-button>Action 2</md-button>
-            </md-card-actions>
+            <div ng-hide="showGlassdoor">
+            <md-card-content class="top-padding">
+                <div class="scrollable screen-height-sm" ng-controller="TwitterFeedCtrl">
+                    <twitterfeedwindow> </twitterfeedwindow>
+                </div>
+            </md-card-content>
+            <md-button class="md-raised md-primary col-sm-3">Subscribe</md-button>
+            </div>
         </md-card>
     </div>
-    <div flex="33" layout="column">
+    <div flex="33" layout="column" >
         <md-card>
-            <md-card-title class="twitter">
+            <md-card-title class="twitter card-title" ng-click="toggle('twitter')">
                 <md-card-title-text>
                     <span><img class="logo-img-sm" src="images/twitter-circle-white.png" alt="Twitter"></span>
                 </md-card-title-text>
             </md-card-title>
-            <md-card-content layout="row" layout-align="space-between">
-                <div class="md-media-xl card-media scrollable" ng-controller="TwitterFeedCtrl">
+            <div ng-hide="showTwitter">
+            <md-card-content class="top-padding">
+                <div class="scrollable screen-height-lg" ng-controller="TwitterFeedCtrl">
                     <twitterfeedwindow> </twitterfeedwindow>
                 </div>
             </md-card-content>
+            <md-button class="md-raised md-primary col-sm-3">Subscribe</md-button>
+            </div>
         </md-card>
     </div>
 </md-content>
+
+<!-- <md-button class="md-fab md-mini"></md-button>-->

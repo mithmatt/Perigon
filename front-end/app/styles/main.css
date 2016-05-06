@@ -34,6 +34,18 @@ body {
   background-color: #01786e;
 }
 
+.screen-height-lg {
+  height: 58vh;
+}
+
+.screen-height-sm {
+  height: 19vh;
+}
+
+.top-padding {
+  padding-top: 15px;
+}
+
 .logo-img {
   display: block;
   max-width:230px;
@@ -60,6 +72,18 @@ body {
 
 .twitter {
   background-color: #55acee;
+}
+
+.news {
+  background-color: #d31800;
+}
+
+.facebook {
+  background-color: #2968a2;
+}
+
+.glassdoor {
+  background-color: #7cb228;
 }
 
 /* Custom page footer */
