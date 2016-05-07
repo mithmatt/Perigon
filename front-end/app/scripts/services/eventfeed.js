@@ -13,7 +13,7 @@ angular.module('frontEndApp')
       events: []
     };
 
-    var ACCESS_TOKEN = 'EAACEdEose0cBACQifySvqvIOE8EhMejoZAcSY1MBGaWlWPnNPZCucg7fnL15KuOUt0fB6cyB5yfCMTZB6BvOZAuvPFLK1WtBJplkg7uBNsa7nW7nGIGTPP0oFHhAbO6lzvsKlyfpodIAT1zDrIbSSMlZAsh2t1eKaVbCEBavpgQZDZD';
+    var ACCESS_TOKEN = 'EAACEdEose0cBANrCKEIphTHLzKIzZCeugcfK2idfY30SmAJy5vOo5xLeGMW1ifZAoMu4iTSZACndD7OkIlRwtPGiNvtrJfhNycgjMlTZCEG4kmTZCrY5wEjhUaqlZCzczCgttSt0vO5csAl0b4yZAv8aHCv4DSF6iAu5c4cQKswKQZDZD';
     var SERVER = 'https://graph.facebook.com/v2.5/pivotalsoftware/events?access_token=' + ACCESS_TOKEN;
 
     object.getEvents = function() {
