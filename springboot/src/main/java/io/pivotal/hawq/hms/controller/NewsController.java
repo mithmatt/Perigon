@@ -10,13 +10,13 @@ import java.util.Collections;
 
 @RestController
 public class NewsController {
-   NewsCollection newsCollection = new NewsCollection();
+
 
     @CrossOrigin(origins = "http://localhost:9000")
     @RequestMapping(path="/news", method = RequestMethod.GET)
     public NewsCollection getNews() {
 
-
+    NewsCollection newsCollection = new NewsCollection();
     News news1 = new News();
     news1.setTitle("Ford to invest $182M in software company Pivotal");
     news1.setId(1);
